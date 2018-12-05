@@ -15,13 +15,13 @@ class Map extends Component {
   }
   renderChart(props) {
     console.log("topology:---->", topology.features);
-    // debugger;
+    
     this.components.svg = d3.select(this.svgRef);
     this.components.width = props.width - 300;
     this.components.height = props.height;
 
     this.components.g = this.components.svg.append("g");
-
+    
     this.components.projection = d3.geoMercator()
       .scale((props.width + 1) / 2.2 / Math.PI)
       .translate([props.width / 2.2, props.height / 1.7]);

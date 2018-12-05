@@ -1,3 +1,22 @@
 .App {
   text-align: center;
 }
+
+.root {
+  width: 1440px;
+  height: 2000px;
+}
+
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column
+}
+
+.quoteContainer {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
