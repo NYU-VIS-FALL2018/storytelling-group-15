@@ -1,15 +1,15 @@
 {
-  "main.css": "/storytelling-group-15/static/css/main.149116cd.chunk.css",
-  "main.js": "/storytelling-group-15/static/js/main.5ff4a1f5.chunk.js",
-  "main.js.map": "/storytelling-group-15/static/js/main.5ff4a1f5.chunk.js.map",
-  "static/js/1.ed0299b0.chunk.js": "/storytelling-group-15/static/js/1.ed0299b0.chunk.js",
-  "static/js/1.ed0299b0.chunk.js.map": "/storytelling-group-15/static/js/1.ed0299b0.chunk.js.map",
-  "runtime~main.js": "/storytelling-group-15/static/js/runtime~main.d0643ea5.js",
-  "runtime~main.js.map": "/storytelling-group-15/static/js/runtime~main.d0643ea5.js.map",
-  "static/css/main.149116cd.chunk.css.map": "/storytelling-group-15/static/css/main.149116cd.chunk.css.map",
-  "static/media/logo.svg": "/storytelling-group-15/static/media/logo.5d5d9eef.svg",
-  "static/media/Stanford_MSA_Database.csv": "/storytelling-group-15/static/media/Stanford_MSA_Database.dff9ed99.csv",
-  "index.html": "/storytelling-group-15/index.html",
-  "precache-manifest.0d4adebfca42c2274013132f40b8ef19.js": "/storytelling-group-15/precache-manifest.0d4adebfca42c2274013132f40b8ef19.js",
-  "service-worker.js": "/storytelling-group-15/service-worker.js"
+  "main.css": "/storytelling-group-15//iv_proj/public/static/css/main.149116cd.chunk.css",
+  "main.js": "/storytelling-group-15//iv_proj/public/static/js/main.d767e0a0.chunk.js",
+  "main.js.map": "/storytelling-group-15//iv_proj/public/static/js/main.d767e0a0.chunk.js.map",
+  "static/js/1.ed0299b0.chunk.js": "/storytelling-group-15//iv_proj/public/static/js/1.ed0299b0.chunk.js",
+  "static/js/1.ed0299b0.chunk.js.map": "/storytelling-group-15//iv_proj/public/static/js/1.ed0299b0.chunk.js.map",
+  "runtime~main.js": "/storytelling-group-15//iv_proj/public/static/js/runtime~main.a95285a5.js",
+  "runtime~main.js.map": "/storytelling-group-15//iv_proj/public/static/js/runtime~main.a95285a5.js.map",
+  "static/css/main.149116cd.chunk.css.map": "/storytelling-group-15//iv_proj/public/static/css/main.149116cd.chunk.css.map",
+  "static/media/logo.svg": "/storytelling-group-15//iv_proj/public/static/media/logo.5d5d9eef.svg",
+  "static/media/Stanford_MSA_Database.csv": "/storytelling-group-15//iv_proj/public/static/media/Stanford_MSA_Database.dff9ed99.csv",
+  "index.html": "/storytelling-group-15//iv_proj/public/index.html",
+  "precache-manifest.e6bf8cc4fb009c403b602321a47b1c93.js": "/storytelling-group-15//iv_proj/public/precache-manifest.e6bf8cc4fb009c403b602321a47b1c93.js",
+  "service-worker.js": "/storytelling-group-15//iv_proj/public/service-worker.js"
 }
