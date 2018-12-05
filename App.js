@@ -10,14 +10,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-
-    // this.data = this.handleData(this.rawdata);
-
   }
-
-  state = {
-    selecteddata: null,
-  };
 
 
   Mapdata = [

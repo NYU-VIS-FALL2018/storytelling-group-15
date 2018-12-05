@@ -114,16 +114,11 @@ class Map extends Component {
     }
     return false;
   }
-
-
   
   loadData() {
     d3.csv('http://localhost:8081/Stanford_MSA_Database.csv', function (data){
       console.log(data)
     })
-      // data.forEach((d)=>{
-      //     console.log(d)
-      // })
   }
 
   cleanData(data) {
@@ -131,7 +126,6 @@ class Map extends Component {
       console.log(row)
     });
   }
-
 
   render() {
     return (

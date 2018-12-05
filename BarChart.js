@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as d3 from 'd3';
-// import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './BarChart.css';
 
 class BarChart extends Component {
@@ -34,8 +33,6 @@ class BarChart extends Component {
 
     this.components.yAxis = d3.axisLeft().scale(this.components.y).tickSize(0);
     this.components.color = d3.scaleOrdinal(d3.schemeCategory10);
-
-
   }
 
   updateData(props) {
