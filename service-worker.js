@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/storytelling-group-15/iv_proj/build/index.html/precache-manifest.6b76b940e0e46172331905036b3f4f74.js"
+  "/storytelling-group-15/iv_proj/build/precache-manifest.d203470c153035b4acc237fca30a40dd.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/storytelling-group-15/iv_proj/build/index.html/index.html", {
+workbox.routing.registerNavigationRoute("/storytelling-group-15/iv_proj/build/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
