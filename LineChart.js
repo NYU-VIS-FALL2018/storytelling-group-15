@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as d3 from 'd3';
 // import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './BarChart.css';
+import s from './LineChart.css';
 
-class BarChart extends Component {
+class LineChart extends Component {
 
   constructor(props) {
     super(props);
@@ -12,12 +12,29 @@ class BarChart extends Component {
 
   }
   renderChart(props) {
-    this.components.svg = d3.select(this.svgRef);
-    this.components.width = props.width - 300;
-    this.components.height = props.height;
+   var svgWidth = 600, svgHeight = 400;
+   var margin = { top: 20, right: 20, bottom: 30, left: 50 };
+   var width = svgWidth - margin.left - margin.right;
+   var height = svgHeight - margin.top - margin.bottom;
+    this.components.svg = d3.select(this.svgRef)
+     .attr("width", svgWidth)
+     .attr("height", svgHeight);
 
-    this.components.g = this.components.svg.append("g")
-      .attr("transform", "translate(" + props.margin.left + "," + props.margin.top + ")");
+
+    // this.components.svg = d3.select(this.svgRef);
+    // this.components.width = props.width - 300;
+    // this.components.height = props.height;
+    this.components.g = svg.append("g")
+   .attr("transform", 
+      "translate(" + margin.left + "," + margin.top + ")"
+   );
+
+
+    // this.components.g = this.components.svg.append("g")
+    //   .attr("transform", "translate(" + props.margin.left + "," + props.margin.top + ")");
+
+    this.components.x = d3.scaleTime().rangeRound([0, width]);
+    this.components.y = d3.scaleLinear().rangeRound([height, 0]);
 
     this.components.x = d3.scaleLinear()
       .range([0, this.components.width])
@@ -61,7 +78,7 @@ class BarChart extends Component {
       .attr("width", function(d) {
         return x(d.value);
       })
-      .style("fill", function(d, i) { return '#1f77b4'; });
+      .style("fill", function(d, i) { return color(i + 4); });
 
     this.components.bars.append("text")
       .attr("class", "label")
@@ -114,7 +131,7 @@ class BarChart extends Component {
   }
 }
 
-BarChart.defaultProps = {
+LineChart.defaultProps = {
   margin: {
     left: 150,
     right: 50,
@@ -123,10 +140,10 @@ BarChart.defaultProps = {
   }
 }
 
-BarChart.propTypes = {
+LineChart.propTypes = {
   data: PropTypes.array.isRequired,
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
 }
 
-export default BarChart;
+export default LineChart;

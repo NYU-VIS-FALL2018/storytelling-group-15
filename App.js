@@ -34,11 +34,12 @@ class App extends Component {
     { lat: 23.4513688, lon: 37.5079895, value: 4, country: 'Guinea' }
   ];
 
-  BarChartdata = [{ name: 'Professionals', value: 25 },
-  { name: 'Graduate', value: 10 },
-  { name: 'UnderGraduate', value: 19 },
-  { name: 'High School', value: 8 },
-  { name: 'Middle School', value: 15 }
+  BarChartdata = [{ name: 'HandGuns', value: 950 },
+  { name: 'MultipleGuns', value: 825 },
+  { name: 'Riffel', value:206  },
+  { name: 'ShotGun', value:82 },
+  { name: 'Semi-automatic', value: 12 },
+  { name: '9 mm Gun', value: 6 },
   ];
 
   render() {
@@ -46,16 +47,25 @@ class App extends Component {
       <div className="App">
         <div className="root">
           <div className="container">
-            <div className="title">Title here</div>
+            <div className="title">Analyzing Factors Behind Mass Shooting in The United States</div>
             <div className="quoteContainer">
-              <div className="quote1">Quote 1 here </div>
-              <div className="quote2">Quote 3 here </div>
+            <div className="innerQuoteContainer">
+                <div className="quote1">“Guns kill on an average of 36 people every day, and the nation doesn’t even blink ” </div>
+                <div className="magzinName">-The Huffington Post (10.01.2015)</div>
+              </div>
+              <div className="innerQuoteContainer">
+                <div className="quote2">“Firearms are involved in the deaths of more than 30,000 people in the US each year”</div>
+                <div> -Bloomberg Issue Overview: Guns in America(10.02.2016)</div>
+              </div>
+            </div>
+            <div className="mapContainer">
+            <Map data={this.Mapdata} width={900} height={500} />
+            <div>Diving into the details of the shootings, we found out that: a. Military grade and semi-automatic weapons like rifles, bayonets, machine guns are being held by non-military and non-police person</div>
             </div>
             <div>
+              
               <BarChart data={this.BarChartdata} width={900} height={500} />
-            </div>
-            <div>
-              <Map data={this.Mapdata} width={900} height={500} />
+              <div>Here, we clearly see that the states with less strict laws have more number of shootings and vice versa</div>
             </div>
 
             {/* <Map data={this.Mapdata} width={900} height={500} /> */}
