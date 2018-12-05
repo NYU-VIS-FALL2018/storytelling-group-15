@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.root {
+  width: 1440px;
+  height: 2000px;
+}
+
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column
+}
+
+.quoteContainer {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -0.1px;
+  text-align: center;
+  color: #000000;
+  height: 100px;
+  text-align: center;
+}
+
+.innerQuoteContainer {
+  padding: 20px;
+}
+
+.magzinName {
+  text-align: right;
+}
+
+.mapContainer {
+  padding: 50px;
+}
