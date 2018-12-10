@@ -6,7 +6,7 @@ import Map from './Map.js';
 import * as d3 from 'd3';
 import BarChartD3 from './BarChart.js';
 
-import ReactD3, { LineChart, ScatterPlot, AreaChart, BarChart, Brush } from 'react-d3-components';
+import ReactD3, { LineChart, ScatterPlot, AreaChart, BarChart, Brush ,PieChart} from 'react-d3-components';
 
 
 // var ScatterPlot = ReactD3.ScatterPlot;
@@ -21,6 +21,14 @@ class App extends Component {
     // this.HandleOnChange = this.HandleOnChange.bind(this);
 
   }
+
+  dataForPieChart = {
+    label: 'somethingA',
+    values: [{x: 'SomethingA', y: 10}, {x: 'SomethingB', y: 4}, {x: 'SomethingC', y: 3}]
+};
+
+ sort = d3.ascending //, d3.descending, func(a,b) { return a - b; }, etc...
+
 
   
 
@@ -125,7 +133,22 @@ class App extends Component {
                 data={this.dataForStackedBarChart}
                 width={400}
                 height={400}
-                margin={{top: 10, bottom: 50, left: 50, right: 10}}/>,
+                margin={{top: 10, bottom: 50, left: 50, right: 10}}/>
+
+                <BarChart
+                groupedBars
+                data={this.dataForStackedBarChart}
+                width={400}
+                height={400}
+                margin={{top: 10, bottom: 50, left: 50, right: 10}} />
+
+                <PieChart
+                data={this.dataForPieChart}
+                width={600}
+                height={400}
+                margin={{top: 10, bottom: 10, left: 100, right: 100}}
+                sort={this.sort}
+                />
 
 
 
