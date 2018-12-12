@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Map.css';
 import * as d3 from 'd3';
 import * as topology from './world_countries.json';
-import DataCSV from './Stanford_MSA_Database.csv';
+// import DataCSV from './Stanford_MSA_Database.csv';
 
 class Map extends Component {
 
@@ -14,7 +14,7 @@ class Map extends Component {
 
   }
   renderChart(props) {
-    console.log("topology:---->", topology.features);
+    // console.log("topology:---->", topology.features);
     
     this.components.svg = d3.select(this.svgRef);
     this.components.width = props.width - 300;
@@ -72,7 +72,9 @@ class Map extends Component {
     this.components.svg.selectAll("circle")
       .data(props.data).enter()
       .append("circle")
-      .attr("cx", function (d) { console.log(projection(d)); return projection([d.lat, d.lon])[0]; })
+      .attr("cx", function (d) { 
+        // console.log(projection(d)); 
+        return projection([d.lat, d.lon])[0]; })
       .attr("cy", function (d) { return projection([d.lat, d.lon])[1]; })
       .attr("r", "4px")
       .attr("fill", "red")
@@ -85,7 +87,9 @@ class Map extends Component {
     this.components.svg.selectAll("circle")
       .data(props.data).enter()
       .append("circle")
-      .attr("cx", function (d) { console.log(projection(d)); return projection([d.lat, d.lon])[0]; })
+      .attr("cx", function (d) { 
+        // console.log(projection(d)); 
+        return projection([d.lat, d.lon])[0]; })
       .attr("cy", function (d) { return projection([d.lat, d.lon])[1]; })
       .attr("r", "4px")
       .attr("fill", "red")
@@ -115,22 +119,23 @@ class Map extends Component {
     return false;
   }
   
-  loadData() {
-    d3.csv('http://localhost:8081/Stanford_MSA_Database.csv', function (data){
-      console.log(data)
-    })
-  }
+  // loadData() {
+  //   d3.csv('http://localhost:8081/Stanford_MSA_Database.csv', function (data){
+  //     console.log(data)
+  //   })
+  // }
 
-  cleanData(data) {
-    data.forEach((row) => {
-      console.log(row)
-    });
-  }
+  // cleanData(data) {
+  //   data.forEach((row) => {
+  //     console.log(row)
+  //   });
+  // }
+  
 
   render() {
     return (
       <div>
-      {this.loadData()}
+      {/* {this.loadData()} */}
         <svg ref={(el) => { this.svgRef = el }} style={{ width: this.props.width, height: this.props.height }}>
         </svg>
         <div id="chart">
