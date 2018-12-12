@@ -52,7 +52,7 @@ class LineGraph extends Component {
                     data={this.state.dataForLineGraph}
                     width={800}
                     height={500}
-                    xAxis={{label: "x-label"}}
+                    xAxis={{innerTickSize: 10, tickArguments: [20],tickPadding: 3,tickDirection:"diagonal", label: "x-label"}}
                     yAxis={{label: "y-label"}}
                     margin={{ top: 10, bottom: 50, left: 50, right: 10 }} />
 
