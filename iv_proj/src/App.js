@@ -67,7 +67,7 @@ class App extends Component {
       }
       return datum
     }
-    d3.csv("../src/data/Stanford_MSA_cleaned.csv").then(csvData => {
+    d3.csv("https://nyu-vis-fall2018.github.io/storytelling-group-15/iv_proj/src/data/Stanford_MSA_cleaned.csv").then(csvData => {
       this.objectVals = {}
       const data = csvData.map(datum => {
         return cleanDatum(datum)
