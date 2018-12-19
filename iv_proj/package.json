@@ -2,6 +2,7 @@
   "name": "iv_proj",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://nyu-vis-fall2018.github.io/storytelling-group-15/iv_proj/build/",
   "dependencies": {
     "@material-ui/core": "^3.6.2",
     "@material-ui/lab": "^3.0.0-alpha.25",
@@ -22,6 +23,7 @@
     "d3-array": "^2.0.2",
     "d3-fetch": "^1.1.2",
     "d3-time-format": "^2.1.3",
+    "gh-pages": "^2.0.1",
     "material-ui": "^0.20.2",
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
@@ -39,7 +41,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
