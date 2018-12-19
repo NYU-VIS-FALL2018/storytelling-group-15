@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "e779d22277856696011a",
+    "revision": "fec7f5372f07ffd5c13e",
     "url": "/storytelling-group-15/iv_proj/build/static/css/main.b523d73f.chunk.css"
   },
   {
-    "revision": "e779d22277856696011a",
-    "url": "/storytelling-group-15/iv_proj/build/static/js/main.e779d222.chunk.js"
+    "revision": "fec7f5372f07ffd5c13e",
+    "url": "/storytelling-group-15/iv_proj/build/static/js/main.fec7f537.chunk.js"
   },
   {
     "revision": "d66cb5ca24466ab62a0e",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/storytelling-group-15/iv_proj/build/static/js/runtime~main.c9f27448.js"
   },
   {
-    "revision": "9b003b0dc0190099eccd54f22ba1b4e8",
+    "revision": "02b7dfd3b80c2d71feba5d93eba61e93",
     "url": "/storytelling-group-15/iv_proj/build/index.html"
   }
 ];
