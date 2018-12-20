@@ -99,28 +99,48 @@ class App extends Component {
             <div>Quote Two 2</div>
           </div>
           {this.state.data.length > 0 &&
-          <div>
-            <div className="LineChartContainer">
-              <div>
-                <AreaChart data={this.state.data} />
-              </div>
-              <div>
-                Description Description Description Description Description Description
-            </div>
-            </div>
-
-
-            <div className="MapContainer">
-            <StepSlider classes={{  root: "root" }} changeMap={this.changeMap.bind(this)}/>
-              {this.state.map}
-            </div>
             <div>
-            <StackedBarChart data={this.state.data}/>
-            </div>
-          </div>}
+              <div className="LineChartContainer">
+                <div>
+                  <AreaChart data={this.state.data} />
+                </div>
+                <div>
+                  Description Description Description Description Description Description
+                 </div>
+
+              </div>
 
 
+              <div className="MapContainer">
+                <hr></hr>
+                <StepSlider classes={{ root: "root" }} changeMap={this.changeMap.bind(this)} />
+                {this.state.map}
+                <div>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </div>
+              </div>
+              <div className="StackBarChart">
+                <div>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </div>
+                <div><StackedBarChart data={this.state.data} /></div>
+              </div>
 
+              <div className="BarChart">
+                <hr></hr>
+                <BarChart data={this.state.data} />
+              </div>
+
+              <div className="BubbleChart">
+                <BubbleChartRace data={this.state.data} />
+                <div>TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText</div>
+              </div>
+
+              <div className="BubbleWeaponChart">
+                <div>TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText</div>
+                <BubbleChartWeapons data={this.state.data} />
+              </div>
+              <div className="MentalIllness">
+               <BarChartMentalIllness data={this.state.data} />
+               <div>TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText</div>
+               </div>
+            </div>}
         </div>
 
         {/* <div className="visualizations">

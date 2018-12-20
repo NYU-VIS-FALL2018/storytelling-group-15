@@ -76,3 +76,38 @@
 .MapContainer {
   padding: 5%;
 }
+
+.StackBarChart {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.BarChart {
+  padding: 5%;
+}
+
+.BubbleChart {
+  padding: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.BubbleWeaponChart {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.MentalIllness {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
