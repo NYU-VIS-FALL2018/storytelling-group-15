@@ -101,7 +101,7 @@ class MapStates extends Component {
         
       <h4>Victims per 100,000 people across States in the US </h4>
       {this.props.mapChanger}
-      <div style={{display: "flex", flexDirection: "row" }} id="section1" className="card text-center">
+      <div style={{display: "flex", flexDirection: "row", justifyContent:"center" }} id="section1" className="card text-center">
         <svg id="map_with_states" width={this.width} height={this.height} />
         <div style={{display: "flex", flexDirection: 'column'}}>
         <p style={{alignItems:"left", fontSize:12}}>Number of Victims</p>

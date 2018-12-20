@@ -231,24 +231,25 @@ class App extends Component {
                   <BubbleChartRace data={this.state.data} />
                 </div>
                 <div className="caption">
-                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+                  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
                 </div>
               </div>
 
               <div className="BubbleWeaponChart">
                 <div className="caption">
-                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+                  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
                 </div>
                 <div data-aos="fade-left">
                   <BubbleChartWeapons data={this.state.data} />
                 </div>
               </div>
+              
               <div className="MentalIllness">
                 <div data-aos="fade-right">
                   <BarChartMentalIllness data={this.state.data} />
                 </div>
                 <div className="caption">
-                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+                  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
                 </div>
               </div>
             </div>
