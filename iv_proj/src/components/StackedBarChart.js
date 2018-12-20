@@ -113,9 +113,7 @@ class StackedBarChart extends Component {
                         height={bar.height}
                         width={50}
                         fill={bar.color}
-                        onClick={event => {
-                          alert(`clicked: ${JSON.stringify(bar)}`);
-                        }}
+
                         // onMouseLeave={event => {
                         //   this.tooltipTimeout = setTimeout(() => {
                         //     this.hideTooltip();
