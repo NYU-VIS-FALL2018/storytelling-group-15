@@ -37,7 +37,7 @@
   text-align: center;
 }
 
-.container {
+.containerText {
   width: 100%;
   position: relative;
   text-align: center;
@@ -63,4 +63,16 @@
 .quoteContainer {
   display: flex;
   justify-content: space-around;
+  padding: 5%;
+}
+
+.LineChartContainer {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.MapContainer {
+  padding: 5%;
 }

@@ -84,27 +84,44 @@ class App extends Component {
     return (
       <div className="root">
         <div className="container">
-          <div className="bannerContainer">
-            <img src={bannerImage} className="bannerDiv" />
+          <div className="containerText">
+            <div className="bannerContainer">
+              <img src={bannerImage} className="bannerDiv" />
 
-            <div className="headerContainer">
-              <h1 style={{ fontSize: '50px', textShadow: '2px 4px white' }}>The Mass Shooting Crisis in the US</h1>
-              <h3>Why has the number of mass shootings gone up in the United States in recent years, <br /> and can the problem even be resolved? </h3>
-              {/* <Typography variant="h2" color="textPrimary">The Mass Shooting Crisis in the US</Typography> */}
-              {/* <Typography variant="subtitle" color="textSecondary" style={{fontSize: '14px', marginBottom: '2.5em'}}>Why has the number of mass shootings gone up in the United States in recent years, <br/> and can the problem even be resolved? </Typography> */}
-            </div>
-            <div className="quoteContainer">
-              <div>alksdfjlskdjf 111111</div>
-              <div>al;ksdfjlaskdfsad  2</div>
+              <div className="headerContainer">
+                <h1 style={{ fontSize: '50px', textShadow: '2px 4px white' }}>The Mass Shooting Crisis in the US</h1>
+                <h3>Why has the number of mass shootings gone up in the United States in recent years, <br /> and can the problem even be resolved? </h3>
+              </div>
             </div>
           </div>
+          <div className="quoteContainer">
+            <div>Quote One</div>
+            <div>Quote Two 2</div>
+          </div>
+          {this.state.data.length > 0 &&
+          <div>
+            <div className="LineChartContainer">
+              <div>
+                <AreaChart data={this.state.data} />
+              </div>
+              <div>
+                Description Description Description Description Description Description
+            </div>
+            </div>
+
+
+            <div className="MapContainer">
+            <StepSlider classes={{  root: "root" }} changeMap={this.changeMap.bind(this)}/>
+              {this.state.map}
+            </div>
+
+          </div>}
+
+
+
         </div>
 
-
-
-        {/* { this.state.data.length > 0 && 
-          
-          <div className="visualizations">
+        {/* <div className="visualizations">
             <div className="year_to_shootings_count_area">
               <AreaChart data={this.state.data} />
             </div>
@@ -114,14 +131,14 @@ class App extends Component {
             <BarChart data={this.state.data} />
             <BubbleChartRace data={this.state.data} />
             <BarChartMentalIllness data={this.state.data} />
-            <BubbleChartWeapons data = {this.state.data} />
-          </div> */}
-
-
-
-
-
+            <BubbleChartWeapons data = {this.state.data} /> */}
       </div>
+
+
+
+
+
+
     );
   }
 }
