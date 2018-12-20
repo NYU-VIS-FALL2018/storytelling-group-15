@@ -4,7 +4,7 @@ import { Group } from "@vx/group";
 import { Grid } from "@vx/grid";
 import { AxisBottom, AxisLeft } from "@vx/axis";
 import { scaleBand, scaleLinear, scaleOrdinal } from "@vx/scale";
-import { withTooltip, Tooltip } from "@vx/tooltip";
+import { withTooltip } from "@vx/tooltip";
 import { LegendOrdinal } from "@vx/legend";
 
 class StackedBarChart extends Component {

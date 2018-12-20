@@ -114,7 +114,9 @@ class App extends Component {
             <StepSlider classes={{  root: "root" }} changeMap={this.changeMap.bind(this)}/>
               {this.state.map}
             </div>
-
+            <div>
+            <StackedBarChart data={this.state.data}/>
+            </div>
           </div>}
 
 
@@ -125,9 +127,10 @@ class App extends Component {
             <div className="year_to_shootings_count_area">
               <AreaChart data={this.state.data} />
             </div>
+            <h3>Mass Shootings Across States by Number of Shootings/Victims</h3>
             <StepSlider classes={{  root: "root" }} changeMap={this.changeMap.bind(this)}/>
               {this.state.map}
-            <StackedBarChart data={this.state.data}/>
+            
             <BarChart data={this.state.data} />
             <BubbleChartRace data={this.state.data} />
             <BarChartMentalIllness data={this.state.data} />
