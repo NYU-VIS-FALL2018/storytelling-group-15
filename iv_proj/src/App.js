@@ -202,6 +202,9 @@ class App extends Component {
                 </div>
               </div>
               <div className="StackBarChart">
+                <div data-aos="fade-right">
+                  <StackedBarChart data={this.state.data} />
+                </div>
                 <div className="caption">
                   To understand just how deadly these shootings can be, we
                   visualize the number of people in the top 5 states with the
@@ -210,9 +213,6 @@ class App extends Component {
                   lives have been lost meaninglessly, and it drives home just
                   how serious this issue really is, justifying our calling it a
                   crisis.
-                </div>
-                <div data-aos="fade-left">
-                  <StackedBarChart data={this.state.data} />
                 </div>
               </div>
               <div className="caption2">

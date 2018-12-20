@@ -41,12 +41,10 @@ class BubbleChartWeapons extends React.Component {
             offsetY: 0
           }}
           style={{
-            width: "850px",
-            height: "500px",
             marginLeft: 35
           }}
-          width={1000}
-          height={900}
+          width={800}
+          height={650}
           showLegend={true} // optional value, pass false to disable the legend.
           legendPercentage={20} // number that represent the % of with that legend going to use.
           legendFont={{

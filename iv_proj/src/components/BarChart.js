@@ -70,8 +70,8 @@ class BarChart extends Component {
     this.x = d => d.ageRange;
     this.y = d => d.number;
 
-    this.width = 820;
-    this.height = 650;
+    this.width = 660;
+    this.height = 550;
     this.margin = {
       left: 65,
       right: 10,

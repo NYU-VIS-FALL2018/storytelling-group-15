@@ -72,7 +72,7 @@ class AreaChart extends Component {
   render() {
     return (
       <div className="annual_shootings">
-        <h3>Number of Mass Shootings In the US Over The Years</h3>
+        <h2>Number of Mass Shootings In the US Over The Years</h2>
         <svg width={this.width} height={this.height}>
           <rect x={0} y={0} width={this.width} height={this.height} fill={this.bg} rx={14} />
           <LinearGradient

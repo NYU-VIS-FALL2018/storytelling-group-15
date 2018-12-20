@@ -56,9 +56,10 @@
 .caption {
   font-size: 24px;
 }
+
 .caption2 {
   font-size: 24px;
-  text-align:justify;
+  text-align: justify;
   justify-content: center;
   line-height: 140%;
 }
@@ -97,12 +98,12 @@
 }
 
 .BarChart {
-  padding: 5%;
+  padding: 2%;
 }
 
 .BubbleChart {
   padding: 3% 0;
-  display: flex;  
+  display: flex;
   align-content: center;
   align-items: center;
 }

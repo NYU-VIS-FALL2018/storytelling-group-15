@@ -38,8 +38,8 @@ class BubbleChartRace extends React.Component {
         //   style={{
         //     marginLeft: 35
         //   }}
-          width={1000}
-          height={900}
+          width={800}
+          height={650}
           showLegend={true} // optional value, pass false to disable the legend.
           legendPercentage={20} // number that represent the % of with that legend going to use.
           legendFont={{
