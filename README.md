@@ -9,7 +9,7 @@ Group 15 (Online: Group 1)
 
 ![Motives To Shootings](https://raw.githubusercontent.com/NYU-VIS-FALL2018/storytelling-group-15/master/iv_proj/public/screenshots/BarChart2.png)
 
-![Ethicities to Shootings](https://raw.githubusercontent.com/NYU-VIS-FALL2018/storytelling-group-15/master/iv_proj/public/screenshots/BubbleChart.png)
+![Ethnicities to Shootings](https://raw.githubusercontent.com/NYU-VIS-FALL2018/storytelling-group-15/master/iv_proj/public/screenshots/BubbleChart1.png)
 
 ![Weapon Types to Shootings](https://raw.githubusercontent.com/NYU-VIS-FALL2018/storytelling-group-15/master/iv_proj/public/screenshots/BubbleChart2.png)
 
@@ -21,7 +21,7 @@ Group 15 (Online: Group 1)
 
 
 ## About
-As we know public transportation is one of the most important part of New York City, through this data visualization project we aim at analysing the yellow cabs data provided by NYC Open Data source and generate visualizations that would help a New York cab rider to make a decision of whether to take a cab or prefer using the subway.
+It seems like every day we hear of an act of gun violence occurring somewhere in the United States, so much so that it has become almost a staple of news reports. A New York Times report recently presented statistics that showed 96 Americans die due by firearms on any given day. This number is absolutely horrifying, and it is especially hard to believe that this is happening in the United States. Since 9/11, there have been only 60 acts of terrorism in the US - contrasting that to mass shootings, there have been more than 1900 since 2012 alone, averaging more than 1 per day. What is especially terrifying that a large proportion of these take place in places of education, often primary and secondary schools. Why has this trend entrenched itself in the US? Who are the people responsible for this, and what motivates them to commit such heinous acts? We focus our analysis on answering these questions and more. In doing so, we restrict ourselves to mass shootings, i.e., cases where there are 4 or more victims of the shooting so that we may gain an understanding of the factors behind them.
 
 
 ## More
