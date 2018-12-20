@@ -108,18 +108,18 @@ class BarChart extends Component {
     this.colorScale = [
       scaleLinear({
         domain: [0, Math.max(...this.data[0].map(this.y))],
-        range: [d3.rgb("red").brighter(), d3.rgb("red").darker()]
+        range: [d3.rgb("#3182bd").brighter(), d3.rgb("#3182bd").darker()]
       }),
       scaleLinear({
         domain: [0, Math.max(...this.data[1].map(this.y))],
-        range: [d3.rgb("red").brighter(), d3.rgb("red").darker()]
+        range: [d3.rgb("#3182bd").brighter(), d3.rgb("#3182bd").darker()]
       })
     ];
   }
   render() {
     return (
       <div>
-          <h3>Age Groups of Shooters</h3>
+          <h3>Number of Shootings & Victims by Age Groups of Shooters</h3>
         <svg width={this.width} height={this.height}>
           <rect
             x={0}

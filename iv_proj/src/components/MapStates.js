@@ -4,6 +4,7 @@ import * as topojson from "topojson-client";
 import { scaleQuantize } from "@vx/scale";
 import topology from "../data/us.json";
 import stateNames from "../data/us_state_names.json";
+import { LegendLinear, LegendItem, LegendLabel } from "@vx/legend"
 
 class MapStates extends Component {
   constructor(props) {
@@ -15,15 +16,22 @@ class MapStates extends Component {
 
     this.names = {};
     this.stateToVictimsCount = {}
+    this.stateToShootingsCount = {}
     stateNames.forEach(d => {
       this.names[d.name.toLowerCase()] = d.id;
       this.names[d.id] = d.name.toLowerCase();
       this.stateToVictimsCount[d.id] = 0
+      this.stateToShootingsCount[d.id] = 0
     });
     this.stateToVictimsCount = this.data.reduce((r, o) => {
       r[this.names[o.State]] = r[this.names[o.State]]? r[this.names[o.State]] + parseInt(o["Total Number of Victims"]): parseInt(o["Total Number of Victims"]);
       return r;
     }, this.stateToVictimsCount);
+
+    this.stateToShootingsCount = this.data.reduce((r, o) => {
+      r[this.names[o.State]] = r[this.names[o.State]]? r[this.names[o.State]] + parseInt(o["Total Number of Victims"]): parseInt(o["Total Number of Victims"]);
+      return r;
+    }, this.stateToShootingsCount);
     const colorDomain = [0, Math.max(...new Set(Object.values(this.stateToVictimsCount)))]
     this.stateColor = scaleQuantize({
       domain: colorDomain,
@@ -60,10 +68,18 @@ class MapStates extends Component {
       .style("stroke", "black")
       .style("stroke-width", "0.5")
       .attr("d", path)
+      .append("title")
+      .text(d => {
+        console.log(d)
+        return `${this.names[d.id].split(' ')
+        .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+        .join(' ')}\nShootings: ${this.stateToShootingsCount[d.id]}\nVictims: ${this.stateToVictimsCount[d.id]}`;
+      });
       
     map_svg
       .append("g")
       .attr("class", "labels")
+      
     
     map_svg
       .selectAll(".labels")
@@ -80,9 +96,37 @@ class MapStates extends Component {
       .text(d => this.stateToVictimsCount[d.id] ? this.stateToVictimsCount[d.id]: "0")
   }
   render() {
+    const oneDecimalFormat = d3.format('.1f');
     return (
-      <div id="section1" className="card text-center">
+      <div style={{display: "flex", flexDirection: "row" }} id="section1" className="card text-center">
         <svg id="map_with_states" width={this.width} height={this.height} />
+        <div style={{display: "flex", flexDirection: 'column'}}>
+        <LegendLinear
+          scale={this.stateColor}
+          labelFormat={(d, i) => {
+            if (i % 2 === 0) return oneDecimalFormat(d);
+            return '';
+          }}
+        >
+          {labels => {
+            return labels.map((label, i) => {
+              const size = 11;
+              return (
+                <LegendItem
+                  key={`legend-quantile-${i}`}
+                >
+                  <svg width={size} height={size} style={{ margin: '2px 0' }}>
+                    <circle fill={label.value} r={size / 2} cx={size / 2} cy={size / 2} />
+                  </svg>
+                  <LegendLabel align={'left'} margin={'0 4px'}>
+                    {label.text}
+                  </LegendLabel>
+                </LegendItem>
+              );
+            });
+          }}
+        </LegendLinear>
+        </div>
       </div>
     );
   }

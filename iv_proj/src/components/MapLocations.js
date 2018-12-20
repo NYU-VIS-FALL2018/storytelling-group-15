@@ -3,6 +3,7 @@ import * as d3 from "d3";
 import * as topojson from "topojson-client";
 import { scaleQuantize } from "@vx/scale";
 import topology from "../data/us.json";
+import { LegendLinear, LegendItem, LegendLabel} from "@vx/legend"
 
 class MapLocations extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class MapLocations extends Component {
     }, {});
     this.circleColor = scaleQuantize({
       domain: [1, ...new Set(Object.values(this.locationToVictimsCount))],
-      range: ["#fcbba1", "#fc9272", "#fb6a4a", "#ef3b2c", "#cb181d", "#99000d"]
+      range: ["#fcbba1", "#fb6a4a","#cb181d", "#99000d"]
     });
   }
 
@@ -73,9 +74,37 @@ class MapLocations extends Component {
   }
 
   render() {
+    const oneDecimalFormat = d3.format('.1f');
     return (
-      <div id="section1" className="card text-center">
+      <div style={{display: "flex", flexDirection: "row" }} id="section1" className="card text-center">
         <svg id="map_with_locations" width={this.width} height={this.height} />
+        <div style={{display: "flex", flexDirection: 'column'}}>
+        <LegendLinear
+          scale={this.circleColor}
+          labelFormat={(d, i) => {
+            if (i % 2 === 0) return oneDecimalFormat(d);
+            return '';
+          }}
+        >
+          {labels => {
+            return labels.map((label, i) => {
+              const size = 11;
+              return (
+                <LegendItem
+                  key={`legend-quantile-${i}`}
+                >
+                  <svg width={size} height={size} style={{ margin: '2px 0' }}>
+                    <circle fill={label.value} r={size / 2} cx={size / 2} cy={size / 2} />
+                  </svg>
+                  <LegendLabel align={'left'} margin={'0 4px'}>
+                    {label.text}
+                  </LegendLabel>
+                </LegendItem>
+              );
+            });
+          }}
+        </LegendLinear>
+        </div>
       </div>
     );
   }

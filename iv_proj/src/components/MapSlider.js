@@ -17,13 +17,13 @@ class StepSlider extends React.Component {
         <input type="radio" value={0} 
                       checked={this.state.value === 0} 
                       onChange={this.handleChange} />
-        State
+        By States
       </label>
       <label>
         <input type="radio" value={1} 
                       checked={this.state.value === 1} 
                       onChange={this.handleChange} />
-        Location
+        By Cities
       </label>
       </div>
     );

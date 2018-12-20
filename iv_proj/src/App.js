@@ -100,7 +100,7 @@ class App extends Component {
               {/* <strong>Number of Shootings Annually in the United States from 1966 to 2016</strong> */}
               <AreaChart data={this.state.data} />
             </div>
-            <h3>Mass Shootings Across States by Number of Shootings/Victims</h3>
+            <h3>Number of Shootings Across the Country</h3>
             <StepSlider classes={{  root: "root" }} changeMap={this.changeMap.bind(this)}/>
             <ReactCSSTransitionReplace
               transitionName="cross-fade"

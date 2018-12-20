@@ -33,7 +33,7 @@ class StackedBarChart extends Component {
         }
         return r
     }, {})
-    this.data = Object.values(this.data)
+    this.data = Object.values(this.data).sort((a, b) => (b["civilian_fatalities"] + b["civilian_injured"]) - (a["civilian_fatalities"] + a["civilian_injured"]) )
     this.keys = Object.keys(this.data[0]).filter(d => d !== "state" && d !== "total_victims");
 
     const totals = this.data.map(d => d["civilian_injured"] + d["civilian_fatalities"]);
@@ -74,6 +74,7 @@ class StackedBarChart extends Component {
     this.xScale.rangeRound([0, this.xMax]);
     this.yScale.range([this.yMax, 0]);
   }
+  
   render() {
     return (
     <div>

@@ -25,12 +25,6 @@ class BubbleChartRace extends React.Component {
     this.xMax = Math.max(...this.data.map(this.x));
   }
 
-  bubbleClick = label => {
-    console.log("Custom bubble click func");
-  };
-  legendClick = label => {
-    console.log("Customer legend click func");
-  };
   render() {
     return (
         <div>
@@ -63,9 +57,6 @@ class BubbleChartRace extends React.Component {
             size: 12,
             color: "#fff"
           }}
-          //Custom bubble/legend click functions such as searching using the label, redirecting to other page
-          bubbleClickFunc={this.bubbleClick}
-          legendClickFun={this.legendClick}
           data={this.data}
         />
         </div>
