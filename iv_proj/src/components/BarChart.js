@@ -157,9 +157,6 @@ class BarChart extends Component {
                     width={barWidth}
                     height={barHeight}
                     fill={this.colorScale[0](this.y(d))}
-                    onClick={event => {
-                        alert(`clicked: ${JSON.stringify(Object.values(d))}`);
-                    }}
                     />
                     );
                 })}
@@ -248,9 +245,6 @@ class BarChart extends Component {
                   width={barWidth}
                   height={barHeight}
                   fill={this.colorScale[1](this.y(d))}
-                  onClick={event => {
-                    alert(`clicked: ${JSON.stringify(Object.values(d))}`);
-                  }}
                 />
               );
             })}
