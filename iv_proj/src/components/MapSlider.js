@@ -1,11 +1,16 @@
 import React from 'react';
 
 class StepSlider extends React.Component {
-  state = {
-    value: 0,
-  };
+  constructor(props) {
+    super(props)
+    this.state = {
+      value : parseInt(this.props.value) || 0
+    }
+  }
+  
 
   handleChange = (event) => {
+
     this.setState({ value: parseInt(event.target.value) });
     this.props.changeMap(event.target.value)
   };

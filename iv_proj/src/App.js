@@ -33,16 +33,27 @@ class App extends Component {
     this.getCSVData();
     // this.getUSMapData()
   }
+
+  getMapChanger(index) {
+    return (
+      <StepSlider
+        classes={{ root: "root" }}
+        value={index}
+        changeMap={this.changeMap.bind(this)}
+      />
+    );
+  }
+
   getMap(value, data) {
     const maps = {
       0: (
         <div key="map_states" className="map_shootings_by_state">
-          <MapStates data={data} />
+          <MapStates data={data} mapChanger={this.getMapChanger(value)} />
         </div>
       ),
       1: (
         <div key="map_locations" className="map_shootings_by_city">
-          <MapLocations data={data} />
+          <MapLocations data={data} mapChanger={this.getMapChanger(value)} />
         </div>
       )
     };
@@ -136,11 +147,18 @@ class App extends Component {
                 science, technology, arts. literature, politics, economics; it's
                 a long list. But one sinister, shameful aspect that also sees
                 the USA leaving the rest of the world far behind is that of gun
-                violence, more specifically mass shootings by civilians. 
-                <br/>
+                violence, more specifically mass shootings by civilians.
+                <br />
                 It seems like gun violence has become a staple of everyday news
                 reports, each incident more horrifying than the one before. Take
-                the Las Vegas shooting of 2015, for instance, when 
+                the Sandy Hook Elementary School shooting, for instance, when a
+                lone 20 year-old man took the life of 28, 20 of them children
+                less than 8 years old. Or the Las Vegas shooting of October
+                2017, when a single shooter armed with multiple firearms gunned
+                down 58 people and injured 851 in only 10 minutes. Why did these
+                things happen? What weapons are the deadliest, and what pushes
+                the perpetrators so far that they commit such a heinous act of
+                their own accord? Let's analyze.
               </div>
               <div className="LineChartContainer">
                 <div data-aos="fade-right">
@@ -157,13 +175,14 @@ class App extends Component {
                 </div>
               </div>
 
+              <div className="caption">
+                Temporally speaking, the problem seems to have flared up quite
+                recently. Let's now take a spatial look at the problem.
+              </div>
+
               <div className="MapContainer">
                 <hr />
                 <div data-aos="zoom-in">
-                  <StepSlider
-                    classes={{ root: "root" }}
-                    changeMap={this.changeMap.bind(this)}
-                  />
                   <ReactCSSTransitionReplace
                     transitionName="cross-fade"
                     transitionEnterTimeout={500}
@@ -173,8 +192,21 @@ class App extends Component {
                   </ReactCSSTransitionReplace>
                 </div>
                 <div className="caption">
-                  Looking at the number of mass shootings across states in the
-                  United States, it is easy to see that
+                  6.2 out of every 100,000 people in the country are killed by
+                  firearms each year. This average can be seen to be justified
+                  from the map above. Looking at the number of mass shootings
+                  across states in the United States since 1968, it is easy to
+                  see that the problem is fairly widespread throughout the
+                  country, with California, Florida and Texas leading the pack
+                  in the number of victims per 100,000 people since 1968. This
+                  is especially striking considering how highly populated these
+                  states are.
+                  <br />
+                  If we look at the distribution of shootings acrss cities (by
+                  clicking on the corresponding radio button), we see a suprising picture. 
+                  Mass shootings seem to be much more concentrated as we move toward the East 
+                  Coast, especially with cities like Chicago, Illinois and Cleveland, Ohio
+                  having seen multiple deadly shootings. 
                 </div>
               </div>
               <div className="StackBarChart">

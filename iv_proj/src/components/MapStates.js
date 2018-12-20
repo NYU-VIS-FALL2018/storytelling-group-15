@@ -70,7 +70,6 @@ class MapStates extends Component {
       .attr("d", path)
       .append("title")
       .text(d => {
-        console.log(d)
         return `${this.names[d.id].split(' ')
         .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
         .join(' ')}\nShootings: ${this.stateToShootingsCount[d.id]}\nVictims: ${this.stateToVictimsCount[d.id]}`;
@@ -98,9 +97,14 @@ class MapStates extends Component {
   render() {
     const oneDecimalFormat = d3.format('.1f');
     return (
+      <div>
+        
+      <h4>Victims per 100,000 people across States in the US </h4>
+      {this.props.mapChanger}
       <div style={{display: "flex", flexDirection: "row" }} id="section1" className="card text-center">
         <svg id="map_with_states" width={this.width} height={this.height} />
         <div style={{display: "flex", flexDirection: 'column'}}>
+        <p style={{alignItems:"left", fontSize:12}}>Number of Victims</p>
         <LegendLinear
           scale={this.stateColor}
           labelFormat={(d, i) => {
@@ -113,7 +117,7 @@ class MapStates extends Component {
               const size = 11;
               return (
                 <LegendItem
-                  key={`legend-quantile-${i}`}
+                key={`legend-quantile-${i}`}
                 >
                   <svg width={size} height={size} style={{ margin: '2px 0' }}>
                     <circle fill={label.value} r={size / 2} cx={size / 2} cy={size / 2} />
@@ -128,6 +132,7 @@ class MapStates extends Component {
         </LegendLinear>
         </div>
       </div>
+          </div>
     );
   }
 }

@@ -78,7 +78,7 @@ class StackedBarChart extends Component {
   render() {
     return (
     <div>
-      <h3>Proportion of Injuries vs Fatalities in the Top 5 States</h3>
+      <h3>Victims in the Top 5 States with the most Shootings</h3>
       <div style={{ position: "relative" }}>
         <svg width={this.width} height={this.height}>
           <rect x={0} y={0} width={this.width} height={this.height} fill={this.bg} rx={14} />
