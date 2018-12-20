@@ -82,7 +82,6 @@ class MapStates extends Component {
   render() {
     return (
       <div id="section1" className="card text-center">
-        <h3>Mass Shootings Across States by Number of Victims</h3>
         <svg id="map_with_states" width={this.width} height={this.height} />
       </div>
     );

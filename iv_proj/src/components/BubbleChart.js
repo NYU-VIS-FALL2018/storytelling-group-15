@@ -1,13 +1,12 @@
 import React from "react";
 import * as d3 from "d3";
-import { Group } from "@vx/group";
 import BubbleChart from "@weknow/react-bubble-chart-d3";
 // import Actions          from '../Actions';
 
 class BubbleChartRace extends React.Component {
   constructor(props) {
     super(props);
-
+    this.colors = d3.schemeCategory10
     this.data = this.props.data.reduce((r, o) => {
       r[o["Shooter Race"]] = r[o["Shooter Race"]] ? 
       r[o["Shooter Race"]] 
@@ -18,6 +17,9 @@ class BubbleChartRace extends React.Component {
       return r;
     }, {});
     this.data = Object.values(this.data);
+    for (let i in this.data) {
+        this.data[i]["color"] = this.colors[i]
+    }
     this.x = d => d.value;
     this.xMin = Math.min(...this.data.map(this.x));
     this.xMax = Math.max(...this.data.map(this.x));
@@ -30,21 +32,18 @@ class BubbleChartRace extends React.Component {
     console.log("Customer legend click func");
   };
   render() {
-    console.log(this.data);
     return (
         <div>
         <h3>Comparing Ethnicities of the Shooters</h3>
         <BubbleChart
-          // graph={{
-          //   zoom: 1,
-          //   offsetX: -0.05,
-          //   offsetY: -0.01
-          // }}
-          style={{
-            width: "900px",
-            height: "500px",
-            marginLeft: 35
+          graph={{
+            zoom: 1,
+            offsetX: 0.03,
+            offsetY: 0
           }}
+        //   style={{
+        //     marginLeft: 35
+        //   }}
           width={600}
           height={500}
           showLegend={true} // optional value, pass false to disable the legend.

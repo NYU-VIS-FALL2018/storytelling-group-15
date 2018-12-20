@@ -3,6 +3,7 @@ dependencies:
   '@material-ui/lab': 3.0.0-alpha.25
   '@vx/axis': 0.0.182
   '@vx/curve': 0.0.182
+  '@vx/event': 0.0.182
   '@vx/geo': 0.0.182
   '@vx/gradient': 0.0.182
   '@vx/grid': 0.0.182
@@ -1704,6 +1705,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-tpuRMx/zs1mvSPUuxynN/7Kj4Mqf94vCdmUvO9LdnrgL5kgFpNgyYN9e0mZyfetbS+FDhBrtR9GC7d6vD36NrA==
+  /@vx/event/0.0.182:
+    dependencies:
+      '@vx/point': 0.0.182
+    dev: false
+    resolution:
+      integrity: sha512-kEnBfcyuSep3QdlpQjMRE4jSCcEC1xIcnIFkDGuTWLutlUgIP//o5VbeHIW4xLcOhLe4BjuMuPgmUNZB5nL5Cw==
   /@vx/geo/0.0.182:
     dependencies:
       '@vx/group': 0.0.182
@@ -12119,6 +12126,7 @@ specifiers:
   '@material-ui/lab': ^3.0.0-alpha.25
   '@vx/axis': ^0.0.182
   '@vx/curve': ^0.0.182
+  '@vx/event': ^0.0.182
   '@vx/geo': ^0.0.182
   '@vx/gradient': ^0.0.182
   '@vx/grid': ^0.0.182

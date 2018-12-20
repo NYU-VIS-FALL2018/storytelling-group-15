@@ -88,7 +88,7 @@ class App extends Component {
           alignItems: 'center',
           justifyContent: 'flex-start',
           margin: '10.5em 0 auto 0',
-          float: 'left'}}>
+          }}>
         <Typography variant="h2" color="textPrimary">The Mass Shooting Crisis in the US</Typography>
         </div>
         <Typography variant="subtitle" color="textSecondary" style={{fontSize: '14px', marginBottom: '2.5em'}}>Why has the number of mass shootings gone up in the United States in recent years, <br/> and can the problem even be resolved? </Typography>
@@ -100,13 +100,14 @@ class App extends Component {
               {/* <strong>Number of Shootings Annually in the United States from 1966 to 2016</strong> */}
               <AreaChart data={this.state.data} />
             </div>
+            <h3>Mass Shootings Across States by Number of Shootings/Victims</h3>
             <StepSlider classes={{  root: "root" }} changeMap={this.changeMap.bind(this)}/>
-            {/* <ReactCSSTransitionReplace
+            <ReactCSSTransitionReplace
               transitionName="cross-fade"
               transitionEnterTimeout={500}
-              transitionLeaveTimeout={300}> */}
+              transitionLeaveTimeout={500}>
               {this.state.map}
-            {/* </ReactCSSTransitionReplace> */}
+            </ReactCSSTransitionReplace>
             <StackedBarChart data={this.state.data}/>
             <BarChart data={this.state.data} />
             <BubbleChartRace data={this.state.data} />

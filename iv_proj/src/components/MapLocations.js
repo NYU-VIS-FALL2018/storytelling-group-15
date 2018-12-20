@@ -21,7 +21,7 @@ class MapLocations extends Component {
     }, {});
     this.circleColor = scaleQuantize({
       domain: [1, ...new Set(Object.values(this.locationToVictimsCount))],
-      range: d3.schemeReds[9]
+      range: ["#fcbba1", "#fc9272", "#fb6a4a", "#ef3b2c", "#cb181d", "#99000d"]
     });
   }
 
@@ -61,9 +61,7 @@ class MapLocations extends Component {
           parseFloat(d["Latitude"])
         ])[1];
       })
-      .attr("r", d => {
-        return (parseFloat(this.locationToShootingsCount[d["Location"]]) * 3).toString() + "px";
-      })
+      .attr("r","5px")
       .attr("fill", d => this.circleColor(this.locationToVictimsCount[d["Location"]]))
       .style("stroke-width", 1.5)
       .append("title")
@@ -77,7 +75,6 @@ class MapLocations extends Component {
   render() {
     return (
       <div id="section1" className="card text-center">
-      <h3>Mass Shootings Across Locations by Number of Shootings & Number of Victims</h3>
         <svg id="map_with_locations" width={this.width} height={this.height} />
       </div>
     );
