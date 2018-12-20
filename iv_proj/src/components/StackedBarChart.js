@@ -56,7 +56,7 @@ class StackedBarChart extends Component {
 
     this.tooltipTimeout = 10000;
 
-    this.width = 800
+    this.width = 700
     this.height = 500
     this.margin = {
         top: 40,

@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -29,4 +29,94 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.root {
+  max-height: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.containerText {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+.bannerContainer {
+  width: 100%;
+}
+
+.bannerDiv {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.headerContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.quoteContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 5%;
+}
+
+.LineChartContainer {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.MapContainer {
+  padding: 5%;
+}
+
+.StackBarChart {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.BarChart {
+  padding: 5%;
+}
+
+.BubbleChart {
+  padding: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.BubbleWeaponChart {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.MentalIllness {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.QuoteCss {
+  font-size: 25px;
+}
+
+.citeCss {
+  font-size: 18px;
+  color: gray;
 }
