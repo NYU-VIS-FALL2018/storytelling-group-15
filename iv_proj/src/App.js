@@ -14,9 +14,15 @@ import BubbleChartRace from "./components/BubbleChart"
 import BarChartMentalIllness from "./components/BarChartMentalIllness"
 import BubbleChartWeapons from "./components/BubbleChartWeapons"
 import bannerImage from "./data/banner.png"
+// import "animate.css"
+import AOS from "aos"
+import 'aos/dist/aos.css';
 class App extends Component {
   constructor(props) {
     super(props)
+    AOS.init({
+      duration: 500
+    });
 
     this.state = {
       data: [],
@@ -95,13 +101,15 @@ class App extends Component {
             </div>
           </div>
           <div className="quoteContainer">
-            <div>Quote One</div>
-            <div>Quote Two 2</div>
+            <div className="QuoteCss">“Guns kill on an average of 36 people every day, and the nation doesn’t even
+                  blink ” <br /><span className="citeCss">-The Huffington Post (10.01.2015)</span></div>
+            <div className="QuoteCss">“Firearms are involved in the deaths of more than 30,000 people in the US each
+                year”<br /> <span className="citeCss">-Bloomberg Issue Overview: Guns in America(10.02.2016)</span></div>
           </div>
           {this.state.data.length > 0 &&
             <div>
               <div className="LineChartContainer">
-                <div>
+                <div data-aos="fade-right">
                   <AreaChart data={this.state.data} />
                 </div>
                 <div>
@@ -113,33 +121,35 @@ class App extends Component {
 
               <div className="MapContainer">
                 <hr></hr>
-                <StepSlider classes={{ root: "root" }} changeMap={this.changeMap.bind(this)} />
-                {this.state.map}
+                <div data-aos="zoom-in">
+                  <StepSlider classes={{ root: "root" }} changeMap={this.changeMap.bind(this)} />
+                  {this.state.map}
+                </div>
                 <div>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </div>
               </div>
               <div className="StackBarChart">
                 <div>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </div>
-                <div><StackedBarChart data={this.state.data} /></div>
+                <div data-aos="fade-left"><StackedBarChart data={this.state.data} /></div>
               </div>
 
               <div className="BarChart">
                 <hr></hr>
-                <BarChart data={this.state.data} />
+                <div data-aos="zoom-in"><BarChart data={this.state.data} /></div>
               </div>
 
               <div className="BubbleChart">
-                <BubbleChartRace data={this.state.data} />
+                <div data-aos="fade-right"><BubbleChartRace data={this.state.data} /></div>
                 <div>TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText</div>
               </div>
 
               <div className="BubbleWeaponChart">
                 <div>TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText</div>
-                <BubbleChartWeapons data={this.state.data} />
+                <div data-aos="fade-left"><BubbleChartWeapons data={this.state.data} /></div>
               </div>
               <div className="MentalIllness">
-               <BarChartMentalIllness data={this.state.data} />
-               <div>TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText</div>
-               </div>
+                <div data-aos="fade-right"><BarChartMentalIllness data={this.state.data} /></div>
+                <div>TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText</div>
+              </div>
             </div>}
         </div>
 

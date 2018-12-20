@@ -111,3 +111,12 @@
   align-content: center;
   align-items: center;
 }
+
+.QuoteCss {
+  font-size: 25px;
+}
+
+.citeCss {
+  font-size: 18px;
+  color: gray;
+}
