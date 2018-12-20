@@ -6,33 +6,34 @@ import Typography from "@material-ui/core/Typography"
 import ReactCSSTransitionReplace from 'react-css-transition-replace';
 import AreaChart from './components/AreaChart'
 import MapStates from './components/MapStates'
-import MapLocations from  './components/MapLocations'
+import MapLocations from './components/MapLocations'
 import StepSlider from "./components/MapSlider"
 import StackedBarChart from "./components/StackedBarChart"
 import BarChart from "./components/BarChart"
 import BubbleChartRace from "./components/BubbleChart"
 import BarChartMentalIllness from "./components/BarChartMentalIllness"
 import BubbleChartWeapons from "./components/BubbleChartWeapons"
+import bannerImage from "./data/banner.png"
 class App extends Component {
   constructor(props) {
     super(props)
-    
+
     this.state = {
       data: [],
       map: {}
     }
-    
-    
+
+
   }
-  componentDidMount(){
+  componentDidMount() {
     this.getCSVData()
     // this.getUSMapData()
   }
-  getMap(value, data){
+  getMap(value, data) {
     const maps = {
-      0: (<div key ="map_states" className="map_shootings_by_state">
-      <MapStates data={data} />
-    </div>),
+      0: (<div key="map_states" className="map_shootings_by_state">
+        <MapStates data={data} />
+      </div>),
       1: (<div key="map_locations" className="map_shootings_by_city">
         <MapLocations data={data} />
       </div>),
@@ -45,22 +46,22 @@ class App extends Component {
       map: this.getMap(value, this.state.data)
     })
   }
-  
+
   getCSVData() {
     const cleanDatum = (datum) => {
       datum.Year = moment(datum.Date).utc().year()
-      for(let i of Object.keys(datum)){
-        if(typeof(datum[i]) === 'string'){
+      for (let i of Object.keys(datum)) {
+        if (typeof (datum[i]) === 'string') {
           datum[i] = datum[i].trim().toLowerCase()
-        } 
-        if(i === "Average Shooter Age") {
+        }
+        if (i === "Average Shooter Age") {
           datum[i] = parseInt(Math.round(parseFloat(datum[i]))) || 25
-        } else if(i === "History of Mental Illness - General") {
+        } else if (i === "History of Mental Illness - General") {
           const mentalIllnessHistoryTypes = ["yes", "no", "unknown"]
-          if(!mentalIllnessHistoryTypes.includes(datum[i])) {
+          if (!mentalIllnessHistoryTypes.includes(datum[i])) {
             datum[i] = "unknown"
           }
-        } else if(i === "Number of shooters"){
+        } else if (i === "Number of shooters") {
           datum[i] = datum[i] === "" ? "unknown" : datum[i]
         }
         this.objectVals[i] = this.objectVals[i] ? this.objectVals[i].add(datum[i]) : new Set([datum[i]])
@@ -78,42 +79,48 @@ class App extends Component {
       })
     })
   }
-  
+
   render() {
     return (
-      <div className="App">
-        <div style={{height:'50%',
-          width: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'flex-start',
-          margin: '10.5em 0 auto 0',
-          float: 'left'}}>
-        <Typography variant="h2" color="textPrimary">The Mass Shooting Crisis in the US</Typography>
+      <div className="root">
+        <div className="container">
+          <div className="bannerContainer">
+            <img src={bannerImage} className="bannerDiv" />
+
+            <div className="headerContainer">
+              <h1 style={{ fontSize: '50px', textShadow: '2px 4px white' }}>The Mass Shooting Crisis in the US</h1>
+              <h3>Why has the number of mass shootings gone up in the United States in recent years, <br /> and can the problem even be resolved? </h3>
+              {/* <Typography variant="h2" color="textPrimary">The Mass Shooting Crisis in the US</Typography> */}
+              {/* <Typography variant="subtitle" color="textSecondary" style={{fontSize: '14px', marginBottom: '2.5em'}}>Why has the number of mass shootings gone up in the United States in recent years, <br/> and can the problem even be resolved? </Typography> */}
+            </div>
+            <div className="quoteContainer">
+              <div>alksdfjlskdjf 111111</div>
+              <div>al;ksdfjlaskdfsad  2</div>
+            </div>
+          </div>
         </div>
-        <Typography variant="subtitle" color="textSecondary" style={{fontSize: '14px', marginBottom: '2.5em'}}>Why has the number of mass shootings gone up in the United States in recent years, <br/> and can the problem even be resolved? </Typography>
-        
-        <hr width="50%" style={{opacity:"0.5", marginBottom: '11em'}}/>
-        { this.state.data.length > 0 && 
+
+
+
+        {/* { this.state.data.length > 0 && 
+          
           <div className="visualizations">
             <div className="year_to_shootings_count_area">
-              {/* <strong>Number of Shootings Annually in the United States from 1966 to 2016</strong> */}
               <AreaChart data={this.state.data} />
             </div>
             <StepSlider classes={{  root: "root" }} changeMap={this.changeMap.bind(this)}/>
-            {/* <ReactCSSTransitionReplace
-              transitionName="cross-fade"
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={300}> */}
               {this.state.map}
-            {/* </ReactCSSTransitionReplace> */}
             <StackedBarChart data={this.state.data}/>
             <BarChart data={this.state.data} />
             <BubbleChartRace data={this.state.data} />
             <BarChartMentalIllness data={this.state.data} />
             <BubbleChartWeapons data = {this.state.data} />
-          </div>
-        }
+          </div> */}
+
+
+
+
+
       </div>
     );
   }
