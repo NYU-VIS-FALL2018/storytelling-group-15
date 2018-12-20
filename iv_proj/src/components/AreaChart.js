@@ -17,10 +17,10 @@ class AreaChart extends Component {
       left: 60,
       top: 55,
       bottom: 60,
-      right: 50
+      right: 75
     };
-    this.width = 500;
-    this.height = 500;
+    this.width = 700;
+    this.height = 600;
     this.bg = "#eaedff";
 
     this.xMax = this.width - this.margin.left - this.margin.right;
@@ -125,7 +125,7 @@ class AreaChart extends Component {
               labelProps={{
                 fill: "#8e205f",
                 textAnchor: "middle",
-                fontSize: 12,
+                fontSize: 14,
                 fontFamily: "Arial"
               }}
               stroke="#1b1a1e"
@@ -133,7 +133,7 @@ class AreaChart extends Component {
               tickLabelProps={(value, index) => ({
                 fill: "#8e205f",
                 textAnchor: "end",
-                fontSize: 10,
+                fontSize: 12,
                 fontFamily: "Arial",
                 dx: "-0.25em",
                 dy: "0.25em"
@@ -149,7 +149,7 @@ class AreaChart extends Component {
               scale={this.xScale}
               numTicks={this.numTicksForWidth(this.width)}
               stroke="#1b1a1e"
-              label="Time"
+              label="Years"
             >
               {axis => {
                 const tickLabelSize = 10;
@@ -174,7 +174,7 @@ class AreaChart extends Component {
                           />
                           <text
                             transform={`translate(${tickX}, ${tickY}) rotate(${tickRotate})`}
-                            fontSize={tickLabelSize}
+                            fontSize={12}
                             textAnchor="middle"
                             fill={tickColor}
                           >
@@ -185,8 +185,8 @@ class AreaChart extends Component {
                     })}
                     <text
                       textAnchor="middle"
-                      transform={`translate(${axisCenter}, 50)`}
-                      fontSize="12"
+                      transform={`translate(${axisCenter+70}, 50)`}
+                      fontSize="1em"
                       fill="#8e205f"
                     >
                       {axis.label}

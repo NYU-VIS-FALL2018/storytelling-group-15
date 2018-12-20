@@ -70,10 +70,10 @@ class BarChart extends Component {
     this.x = d => d.ageRange;
     this.y = d => d.number;
 
-    this.width = 500;
-    this.height = 400;
+    this.width = 820;
+    this.height = 650;
     this.margin = {
-      left: 55,
+      left: 65,
       right: 10,
       top: 40,
       bottom: 0
@@ -118,8 +118,10 @@ class BarChart extends Component {
   }
   render() {
     return (
-      <div>
-          <h3>Number of Shootings & Victims by Age Groups of Shooters</h3>
+      <div style={{display: 'flex', flexDirection: 'column'}}>
+          <h2>Number of Shootings & Victims by Age Groups of Shooters</h2>
+          <div style={{display: 'flex', flexDirection: 'row'}}>
+        <div style={{paddingRight: '5px'}}>
         <svg width={this.width} height={this.height}>
           <rect
             x={0}
@@ -128,7 +130,7 @@ class BarChart extends Component {
             height={this.height}
             fill={this.bg}
             rx={14}
-          />
+            />
           <Grid
             top={this.margin.top}
             left={this.margin.left}
@@ -139,28 +141,28 @@ class BarChart extends Component {
             stroke={"black"}
             strokeOpacity={0.1}
             xOffset={this.xScale[0].bandwidth() / 2}
-          />
+            />
           <Group top={this.margin.top} left={this.margin.left}>
             {this.data[0].map((d, i) => {
-              const age = this.x(d);
-              const barWidth = this.xScale[0].bandwidth();
-              const barHeight = this.yMax - this.yScale[0](this.y(d));
-              const barX = this.xScale[0](age);
-              const barY = this.yMax - barHeight;
-              return (
-                <Bar
-                  key={`bar-${age}`}
-                  x={barX}
-                  y={barY}
-                  width={barWidth}
-                  height={barHeight}
-                  fill={this.colorScale[0](this.y(d))}
-                  onClick={event => {
-                    alert(`clicked: ${JSON.stringify(Object.values(d))}`);
-                  }}
-                />
-              );
-            })}
+                const age = this.x(d);
+                const barWidth = this.xScale[0].bandwidth();
+                const barHeight = this.yMax - this.yScale[0](this.y(d));
+                const barX = this.xScale[0](age);
+                const barY = this.yMax - barHeight;
+                return (
+                    <Bar
+                    key={`bar-${age}`}
+                    x={barX}
+                    y={barY}
+                    width={barWidth}
+                    height={barHeight}
+                    fill={this.colorScale[0](this.y(d))}
+                    onClick={event => {
+                        alert(`clicked: ${JSON.stringify(Object.values(d))}`);
+                    }}
+                    />
+                    );
+                })}
           </Group>
           <Group top={this.margin.top} left={this.margin.left}>
             <AxisLeft
@@ -170,45 +172,47 @@ class BarChart extends Component {
               hideZero
               label="Number of Shootings"
               labelProps={{
-                fill: "steelblue",
-                textAnchor: "middle",
-                fontSize: 11,
-                fontFamily: "Arial"
-              }}
-              tickLabelProps={(value, index) => ({
-                fill: "steelblue",
-                textAnchor: "end",
-                fontSize: 10,
-                fontFamily: "Arial",
-                dx: "-0.25em",
-                dy: "0.25em"
-              })}
-              stroke="steelblue"
+                  fill: "steelblue",
+                  textAnchor: "middle",
+                  fontSize: 14,
+                  fontFamily: "Arial"
+                }}
+                tickLabelProps={(value, index) => ({
+                    fill: "steelblue",
+                    textAnchor: "end",
+                    fontSize: 14,
+                    fontFamily: "Arial",
+                    dx: "-0.25em",
+                    dy: "0.25em"
+                })}
+                stroke="steelblue"
               tickStroke="steelblue"
               tickComponent={({ formattedValue, ...tickProps }) => (
-                <text {...tickProps}>{formattedValue}</text>
-              )}
-            />
+                  <text {...tickProps}>{formattedValue}</text>
+                  )}
+                  />
             <AxisBottom
               top={this.yMax}
               scale={this.xScale[0]}
               stroke="steelblue"
               label="Age Groups"
               labelProps={{
-                fill: "steelblue",
-                textAnchor: "middle",
-                fontSize: 11,
-                fontFamily: "Arial"
-              }}
-              tickStroke={"steelblue"}
-              tickLabelProps={(value, index) => ({
-                fill: "steelblue",
-                fontSize: 11,
-                textAnchor: "middle"
-              })}
-            />
+                  fill: "steelblue",
+                  textAnchor: "middle",
+                  fontSize: 14,
+                  fontFamily: "Arial"
+                }}
+                tickStroke={"steelblue"}
+                tickLabelProps={(value, index) => ({
+                    fill: "steelblue",
+                    fontSize: 14,
+                    textAnchor: "middle"
+                })}
+                />
           </Group>
         </svg>
+        </div>
+        <div style={{paddingLeft: '5px'}}>
         <svg width={this.width} height={this.height}>
           <rect
             x={0}
@@ -261,13 +265,13 @@ class BarChart extends Component {
               labelProps={{
                 fill: "steelblue",
                 textAnchor: "middle",
-                fontSize: 11,
+                fontSize: 14,
                 fontFamily: "Arial"
               }}
               tickLabelProps={(value, index) => ({
                 fill: "steelblue",
                 textAnchor: "end",
-                fontSize: 10,
+                fontSize: 14,
                 fontFamily: "Arial",
                 dx: "-0.25em",
                 dy: "0.25em"
@@ -286,18 +290,20 @@ class BarChart extends Component {
               labelProps={{
                 fill: "steelblue",
                 textAnchor: "middle",
-                fontSize: 11,
+                fontSize: 14,
                 fontFamily: "Arial"
               }}
               tickStroke={"steelblue"}
               tickLabelProps={(value, index) => ({
                 fill: "steelblue",
-                fontSize: 11,
+                fontSize: 14,
                 textAnchor: "middle"
               })}
             />
           </Group>
         </svg>
+        </div>
+        </div>
       </div>
     );
   }

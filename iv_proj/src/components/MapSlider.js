@@ -17,7 +17,7 @@ class StepSlider extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{marginBottom: '3.5em'}}>
       <label>
         <input type="radio" value={0} 
                       checked={this.state.value === 0} 

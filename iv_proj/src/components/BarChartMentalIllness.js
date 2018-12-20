@@ -25,8 +25,8 @@ class BarChartMentalIllness extends Component {
     this.x = d => d.motive;
     this.y = d => d.number;
 
-    this.width = 500;
-    this.height = 550;
+    this.width = 900;
+    this.height = 650;
     this.margin = {
       left: 55,
       right: 10,
@@ -69,7 +69,7 @@ class BarChartMentalIllness extends Component {
   render() {
     return (
       <div>
-        <h3>Possible Motives Behind The Shootings</h3>
+        <h2>Possible Motives Behind The Shootings</h2>
         <svg width={this.width} height={this.height}>
           <rect
             x={0}
@@ -121,21 +121,21 @@ class BarChartMentalIllness extends Component {
               hideZero
               label="Number of Shootings"
               labelProps={{
-                fill: "steelblue",
+                fill: "#6a51a3",
                 textAnchor: "middle",
-                fontSize: 11,
+                fontSize: 14,
                 fontFamily: "Arial"
               }}
               tickLabelProps={(value, index) => ({
-                fill: "steelblue",
+                fill: "#6a51a3",
                 textAnchor: "end",
-                fontSize: 10,
+                fontSize: 15,
                 fontFamily: "Arial",
                 dx: "-0.25em",
                 dy: "0.25em"
               })}
-              stroke="steelblue"
-              tickStroke="steelblue"
+              stroke="#6a51a3"
+              tickStroke="#6a51a3"
               tickComponent={({ formattedValue, ...tickProps }) => (
                 <text {...tickProps}>{formattedValue}</text>
               )}
@@ -163,7 +163,7 @@ class BarChartMentalIllness extends Component {
               left={0}
               scale={this.xScale}
               numTicks={18}
-              stroke="#1b1a1e"
+              stroke="#6a51a3"
               label="Motives"
             >
               {axis => {
@@ -184,13 +184,13 @@ class BarChartMentalIllness extends Component {
                           <Line
                             from={tick.from}
                             to={tick.to}
-                            stroke={tickColor}
+                            stroke={"#6a51a3"}
                           />
                           <text
                             transform={`translate(${tickX}, ${tickY-10}) rotate(${tickRotate})`}
-                            fontSize={tickLabelSize}
+                            fontSize={16}
                             textAnchor="end"
-                            fill={tickColor}
+                            fill={"#6a51a3"}
                           >
                             {tick.formattedValue}
                           </text>
@@ -200,8 +200,8 @@ class BarChartMentalIllness extends Component {
                     <text
                       textAnchor="middle"
                       transform={`translate(${axisCenter}, 110)`}
-                      fontSize="12"
-                      fill="#8e205f"
+                      fontSize="14"
+                      fill="#6a51a3"
                       fontWeight="bold"
                     >
                       {"Motives"}

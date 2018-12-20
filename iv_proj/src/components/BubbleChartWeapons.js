@@ -33,7 +33,7 @@ class BubbleChartWeapons extends React.Component {
   render() {
     return (
         <div>
-        <h3>Weaons Most Used In Shootings</h3>
+        <h2>Weapons Most Used In Shootings</h2>
         <BubbleChart
           graph={{
             zoom: 1,
@@ -41,27 +41,27 @@ class BubbleChartWeapons extends React.Component {
             offsetY: 0
           }}
           style={{
-            width: "900px",
+            width: "850px",
             height: "500px",
             marginLeft: 35
           }}
-          width={600}
-          height={500}
+          width={1000}
+          height={900}
           showLegend={true} // optional value, pass false to disable the legend.
           legendPercentage={20} // number that represent the % of with that legend going to use.
           legendFont={{
             family: "Arial",
-            size: 10,
+            size: 14,
             color: "#000"
           }}
           valueFont={{
             family: "Arial",
-            size: 11,
+            size: 13,
             color: "#fff"
           }}
           labelFont={{
             family: "Arial",
-            size: 12,
+            size: 25,
             color: "#fff"
           }}
           //Custom bubble/legend click functions such as searching using the label, redirecting to other page

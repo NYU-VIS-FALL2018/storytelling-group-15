@@ -32,7 +32,7 @@ class MapLocations extends Component {
     var projection = d3.geoAlbersUsa();
     var path = d3.geoPath().projection(projection);
     const states = topojson.feature(this.us, this.us.objects.states).features;
-    projection.scale(1000);
+    projection.scale(1130);
 
     map_svg
       .selectAll("path")
@@ -78,12 +78,12 @@ class MapLocations extends Component {
     const oneDecimalFormat = d3.format('.1f');
     return (
     <div>
-       <h4>Shootings Across Cities in the US </h4>
+       <h2>Shootings Across Cities in the US </h2>
       <div>
         {this.props.mapChanger}
 
       </div>
-      <div style={{display: "flex", flexDirection: "row" }} id="section1" className="card text-center">
+      <div style={{display: "flex", flexDirection: "row", justifyContent: "center" }} id="section1" className="card text-center">
         <svg id="map_with_locations" width={this.width} height={this.height} />
         <div style={{display: "flex", flexDirection: 'column'}}>
         <p style={{alignItems:"left", fontSize:12}}>Number of Victims</p>

@@ -78,7 +78,7 @@ class StackedBarChart extends Component {
   render() {
     return (
     <div>
-      <h3>Victims in the Top 5 States with the most Shootings</h3>
+      <h2>Victims in the Top 5 States with the most Shootings</h2>
       <div style={{ position: "relative" }}>
         <svg width={this.width} height={this.height}>
           <rect x={0} y={0} width={this.width} height={this.height} fill={this.bg} rx={14} />
@@ -150,13 +150,13 @@ class StackedBarChart extends Component {
               labelProps={{
                 fill: this.purple3,
                 textAnchor: "middle",
-                fontSize: 11,
+                fontSize: 14,
                 fontFamily: "Arial"
               }}
               tickLabelProps={(value, index) => ({
                 fill: this.purple3,
                 textAnchor: "end",
-                fontSize: 10,
+                fontSize: 13,
                 fontFamily: "Arial",
                 dx: "-0.25em",
                 dy: "0.25em"
@@ -175,7 +175,7 @@ class StackedBarChart extends Component {
             tickStroke={this.purple3}
             tickLabelProps={(value, index) => ({
                 fill: this.purple3,
-                fontSize: 11,
+                fontSize: 14,
                 textAnchor: "middle"
             })}
             />

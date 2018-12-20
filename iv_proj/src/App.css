@@ -93,7 +93,6 @@
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  width: 90%;
   padding: 5% 0;
 }
 
@@ -102,9 +101,8 @@
 }
 
 .BubbleChart {
-  padding: 5% 0;
-  display: flex;
-  justify-content: space-around;
+  padding: 3% 0;
+  display: flex;  
   align-content: center;
   align-items: center;
 }
@@ -118,18 +116,21 @@
 
 .MentalIllness {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-content: center;
   align-items: center;
   padding: 5% 0;
 }
 
 .QuoteCss {
-  font-size: 20px;
+  font-size: 30px;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 .citeCss {
-  font-size: 13px;
+  font-size: 20px;
   color: gray;
 }
 

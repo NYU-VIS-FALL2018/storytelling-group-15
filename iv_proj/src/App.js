@@ -140,12 +140,6 @@ class App extends Component {
           {this.state.data.length > 0 && (
             <div>
               <div className="caption2">
-                The United States is a world leader in many different respects -
-                science, technology, literature, politics, economics; it's a
-                long list. But one sinister, shameful aspect that also sets the
-                country apart from the rest of the world is that of gun
-                violence, more specifically mass shootings by civilians.
-                <br />
                 <br />
                 It seems like gun violence has become a staple of everyday news
                 reports, each incident more horrifying than the one before. Take
@@ -172,12 +166,10 @@ class App extends Component {
                   seems quite likely that the upward trend will continue.
                 </div>
               </div>
-
               <div className="caption">
-                Temporally speaking, the problem seems to have flared up quite
-                recently. Let's now take a spatial look at the problem.
+                Temporally, the problem seems to have flared up quite recently.
+                Let's now take a spatial look at it.
               </div>
-
               <div className="MapContainer">
                 {/* <hr /> */}
                 <div data-aos="zoom-in">
@@ -200,6 +192,7 @@ class App extends Component {
                   is especially striking considering how highly populated these
                   states are.
                   <br />
+                  <br />
                   If we look at the distribution of shootings acrss cities (by
                   clicking on the corresponding radio button), we see a
                   suprising picture. Mass shootings seem to be much more
@@ -210,38 +203,73 @@ class App extends Component {
               </div>
               <div className="StackBarChart">
                 <div className="caption">
-                  To understand just how deadly these shootings can be in the
-                  top 5 states with the highest number of mass shootings, we
-                  visualize the number of people in each state that have been
-                  victims of such incidents since 1968. It is saddening to see
-                  how many lives have been lost meaninglessly, and it drives
-                  home just how serious this issue really is, justifying our
-                  calling it a crisis.
+                  To understand just how deadly these shootings can be, we
+                  visualize the number of people in the top 5 states with the
+                  highest number of mass shootings that have been victims of
+                  such incidents since 1968. It is saddening to see how many
+                  lives have been lost meaninglessly, and it drives home just
+                  how serious this issue really is, justifying our calling it a
+                  crisis.
                 </div>
                 <div data-aos="fade-left">
                   <StackedBarChart data={this.state.data} />
                 </div>
               </div>
-
+              <div className="caption2">
+                But what prompts these people to take such a step? Is it
+                psychological, or merely a spontaneous decision? Let's try to
+                look at the attributes of the shooters to see if we can find
+                some link there.
+              </div>
               <div className="BarChart">
                 {/* <hr /> */}
                 <div data-aos="zoom-in">
                   <BarChart data={this.state.data} />
                 </div>
               </div>
-
+              <div class="caption2">
+                When we see what age groups are most commonly involved in
+                perpetrating mass shootings, it is quite clear that it is most
+                often young people who commit these acts. It is surprising to
+                note that each shooter between the ages of 20-30 taking almost 9
+                lives on average. Another astonishing fact to note here is that
+                even teenagers between the ages of 15 to 19 are responsible for
+                a major share of the killings. That there were 10 shootings by
+                children between the ages of 10-14 only goes to show how easily
+                accessible guns are in the United States. This is a big factor
+                behind the number of gun violence cases, according to experts.
+              </div>
               <div className="BubbleChart">
                 <div data-aos="fade-right">
                   <BubbleChartRace data={this.state.data} />
                 </div>
                 <div className="caption">
-                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+                  It's again quite surprising to note that most mass shootings
+                  were carried out by White Americans! Although there
+                  has been a huge furore recently about banning immigrants of
+                  certain religions from entering the country for national
+                  security, the data shows exactly the opposite trend.
                 </div>
               </div>
-
+              <div className="caption2">
+                It is quite amazing to note that the youth of the country has
+                largely been responsible for the issue. This, according to
+                experts, is majorly because of a lack of proper education and/or
+                guidance. But is it just the people to blame? Isn't the
+                widespread easy access to military-grade firearms a significant
+                contributing factor?
+              </div>
               <div className="BubbleWeaponChart">
                 <div className="caption">
-                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+                  Handguns are the cheapest and most easily available guns in
+                  the US market, and the fact that they have been responsible
+                  for the most mass shootings by a margin of almost double
+                  cannot be a co-incidence. Semi-automatic rifles, like the
+                  infamous AR-5, are more expensive but extremely deadly.
+                  Shootings carried out using rifles have on an average 6 more
+                  deaths than all other weapon types, justifying the recent
+                  demand to ban the AR-5 and the bump stocks that make it even
+                  more dangerous.
                 </div>
                 <div data-aos="fade-left">
                   <BubbleChartWeapons data={this.state.data} />
@@ -252,25 +280,48 @@ class App extends Component {
                   <BarChartMentalIllness data={this.state.data} />
                 </div>
                 <div className="caption">
-                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+                  It is very commonly cited by pro-gun rights activists that the
+                  perpetrators of mass shootings are of poor mental health. We
+                  decided to fact check their claim, and given the data, it does
+                  not seem to hold up at all! Shooters with a known history of
+                  mental illness corresponded to less than 1 in 10 shootings. So
+                  while it might be advisable to enforce mental health checkups
+                  before a person is allowed to purchase a firearm, it might be
+                  far from the solution to the problem.
                 </div>
+              </div>
+              <div className="caption2">
+                In conclusion, it does not seem that "conventional" methods
+                would work to resolve this issue. Ideas like curtailing
+                immigration, or allowing guns in schools, or even nominal
+                background checks do sound like they might work, but the data
+                just doesn't support them.
+                <br />
+                <br />
+                The US has almost more than 90 firearms in civilian possession
+                for every 100 people. That ratio is almost 2.5 times the next
+                country in the list. Since 1983, 2 out of 3 mass shootings that
+                have happened around the world have been in the US. Contrast
+                that to Australia, which implemented a strict gun control
+                legislation in 1996. It hasn't had a single mass shooting since.
+                <br />
+                <br />
+                Given this observation and quite a few more, it seems that gun
+                control is an idea that is almost guaranteed to work, but
+                without societal support and political willpower it cannot
+                happen. It is high time that this problem be seen as more than
+                just that, that we acknowledge it as a <b>CRISIS</b>.
+                <br />
+                <br />
+                <div className="caption2" style={{textAlign: 'center'}}>
+                THAT THIS IS NOT NORMAL.
+                </div>
+                <br />
+                <br />
               </div>
             </div>
           )}
         </div>
-
-        {/* <div className="visualizations">
-            <div className="year_to_shootings_count_area">
-              <AreaChart data={this.state.data} />
-            </div>
-            <h3>Number of Shootings Across the Country</h3>
-            <StepSlider classes={{  root: "root" }} changeMap={this.changeMap.bind(this)}/>
-              {this.state.map}
-            
-            <BarChart data={this.state.data} />
-            <BubbleChartRace data={this.state.data} />
-            <BarChartMentalIllness data={this.state.data} />
-            <BubbleChartWeapons data = {this.state.data} /> */}
       </div>
     );
   }
