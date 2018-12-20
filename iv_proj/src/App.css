@@ -74,7 +74,7 @@
 }
 
 .MapContainer {
-  padding: 5%;
+  /* padding: 5%; */
 }
 
 .StackBarChart {
@@ -83,7 +83,7 @@
   align-content: center;
   align-items: center;
   width: 90%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .BarChart {
@@ -91,7 +91,7 @@
 }
 
 .BubbleChart {
-  padding: 5%;
+  /* padding: 5%; */
   display: flex;
   justify-content: space-around;
   align-content: center;
@@ -100,7 +100,7 @@
 
 .BubbleWeaponChart {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-content: center;
   align-items: center;
 }

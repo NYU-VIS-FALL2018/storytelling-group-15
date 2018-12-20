@@ -98,7 +98,7 @@ class MapStates extends Component {
   render() {
     const oneDecimalFormat = d3.format('.1f');
     return (
-      <div style={{display: "flex", flexDirection: "row" }} id="section1" className="card text-center">
+      <div style={{display: "flex", flexDirection: "row",justifyContent: "center" }} id="section1" className="card text-center">
         <svg id="map_with_states" width={this.width} height={this.height} />
         <div style={{display: "flex", flexDirection: 'column'}}>
         <LegendLinear
