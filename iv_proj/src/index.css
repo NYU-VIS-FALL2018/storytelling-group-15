@@ -7,11 +7,10 @@ body {
   background-color: #EBF8FF
 }
 
-
-/* .container:not(.containerText) {
+.container:not(.containerText) {
   padding-left: 1.5%;
   padding-right: 1.5%;
-} */
+}
 
 .caption {
   padding-left: 1%;
