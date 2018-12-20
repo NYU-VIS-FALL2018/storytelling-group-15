@@ -8,6 +8,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #EBF8FF
 }
+.container:not(.containerText) {
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+}
+.caption {
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  overflow-wrap: break-word;
+  line-height: 200%;
+  
+}
 
 .cross-fade-leave {
   opacity: 1;

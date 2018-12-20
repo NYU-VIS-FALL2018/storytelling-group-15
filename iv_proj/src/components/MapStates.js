@@ -93,7 +93,7 @@ class MapStates extends Component {
       // .append('svg:tspan')
       // .attr('x', 0)
       // .attr('dy', 20)
-      .text(d => this.stateToVictimsCount[d.id] ? this.stateToVictimsCount[d.id]: "0")
+      .text(d => this.stateToVictimsCount[d.id] ? parseFloat(this.stateToVictimsCount[d.id]/16).toFixed(2): "0")
   }
   render() {
     const oneDecimalFormat = d3.format('.1f');
