@@ -53,6 +53,16 @@
   opacity: 0.5;
 }
 
+.caption {
+  font-size: 24px;
+}
+.caption2 {
+  font-size: 24px;
+  text-align:justify;
+  justify-content: center;
+  line-height: 140%;
+}
+
 .headerContainer {
   position: absolute;
   top: 50%;
@@ -113,10 +123,10 @@
 }
 
 .QuoteCss {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .citeCss {
-  font-size: 18px;
+  font-size: 13px;
   color: gray;
 }

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import * as d3 from "d3-fetch";
 import * as moment from "moment";
-import Typography from "@material-ui/core/Typography";
 import ReactCSSTransitionReplace from "react-css-transition-replace";
 import AreaChart from "./components/AreaChart";
 import MapStates from "./components/MapStates";
@@ -114,14 +113,12 @@ class App extends Component {
               <img src={bannerImage} className="bannerDiv" />
 
               <div className="headerContainer">
-                <h1 style={{ fontSize: "50px", textShadow: "2px 4px white" }}>
+                <h1 style={{ fontSize: "60px", textShadow: "2px 4px white" }}>
                   The Mass Shooting Crisis in the US
                 </h1>
-                <h4>
-                  Why has the number of mass shootings gone up in the United
-                  States in recent years, and how close are we to solving the
-                  problem?{" "}
-                </h4>
+                <h2>
+                  Is it really a serious problem, or just a continuing trend?
+                </h2>
               </div>
             </div>
           </div>
@@ -142,12 +139,13 @@ class App extends Component {
           </div>
           {this.state.data.length > 0 && (
             <div>
-              <div className="caption">
+              <div className="caption2">
                 The United States is a world leader in many different respects -
-                science, technology, arts. literature, politics, economics; it's
-                a long list. But one sinister, shameful aspect that also sees
-                the USA leaving the rest of the world far behind is that of gun
+                science, technology, literature, politics, economics; it's a
+                long list. But one sinister, shameful aspect that also sets the
+                country apart from the rest of the world is that of gun
                 violence, more specifically mass shootings by civilians.
+                <br />
                 <br />
                 It seems like gun violence has become a staple of everyday news
                 reports, each incident more horrifying than the one before. Take
@@ -191,7 +189,7 @@ class App extends Component {
                     {this.state.map}
                   </ReactCSSTransitionReplace>
                 </div>
-                <div className="caption">
+                <div className="caption2">
                   6.2 out of every 100,000 people in the country are killed by
                   firearms each year. This average can be seen to be justified
                   from the map above. Looking at the number of mass shootings
@@ -203,16 +201,22 @@ class App extends Component {
                   states are.
                   <br />
                   If we look at the distribution of shootings acrss cities (by
-                  clicking on the corresponding radio button), we see a suprising picture. 
-                  Mass shootings seem to be much more concentrated as we move toward the East 
-                  Coast, especially with cities like Chicago, Illinois and Cleveland, Ohio
-                  having seen multiple deadly shootings. 
+                  clicking on the corresponding radio button), we see a
+                  suprising picture. Mass shootings seem to be much more
+                  concentrated as we move toward the East Coast, especially with
+                  cities like Chicago, Illinois and Cleveland, Ohio having seen
+                  multiple deadly shootings.
                 </div>
               </div>
               <div className="StackBarChart">
                 <div className="caption">
-                  Text Text Text Text Text Text Text Text Text Text Text Text
-                  Text Text Text Text Text Text Text Text Text Text Text Text{" "}
+                  To understand just how deadly these shootings can be in the
+                  top 5 states with the highest number of mass shootings, we
+                  visualize the number of people in each state that have been
+                  victims of such incidents since 1968. It is saddening to see
+                  how many lives have been lost meaninglessly, and it drives
+                  home just how serious this issue really is, justifying our
+                  calling it a crisis.
                 </div>
                 <div data-aos="fade-left">
                   <StackedBarChart data={this.state.data} />
@@ -231,25 +235,24 @@ class App extends Component {
                   <BubbleChartRace data={this.state.data} />
                 </div>
                 <div className="caption">
-                  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
                 </div>
               </div>
 
               <div className="BubbleWeaponChart">
                 <div className="caption">
-                  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
                 </div>
                 <div data-aos="fade-left">
                   <BubbleChartWeapons data={this.state.data} />
                 </div>
               </div>
-              
               <div className="MentalIllness">
                 <div data-aos="fade-right">
                   <BarChartMentalIllness data={this.state.data} />
                 </div>
                 <div className="caption">
-                  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+                  TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
                 </div>
               </div>
             </div>
