@@ -27,4 +27,4 @@ It seems like every day we hear of an act of gun violence occurring somewhere in
 ## More
 [DEMO](https://nyu-vis-fall2018.github.io/storytelling-group-15/iv_proj/build/)
 
-[Project Description](https://docs.google.com/document/d/1mfWEy_-1Nm2hpLoSQ3wazs6B5Osgm8gCXXZ731p_rxo/edit?usp=sharing)
+[Project Description](https://github.com/NYU-VIS-FALL2018/storytelling-group-15/raw/master/iv_proj/public/Final_Report.pdf)
