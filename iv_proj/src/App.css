@@ -71,10 +71,11 @@
   justify-content: space-around;
   align-content: center;
   align-items: center;
+  padding: 5% 0;
 }
 
 .MapContainer {
-  /* padding: 5%; */
+  padding: 5% 0;
 }
 
 .StackBarChart {
@@ -83,7 +84,7 @@
   align-content: center;
   align-items: center;
   width: 90%;
-  /* margin: 0 auto; */
+  padding: 5% 0;
 }
 
 .BarChart {
@@ -91,7 +92,7 @@
 }
 
 .BubbleChart {
-  /* padding: 5%; */
+  padding: 5% 0;
   display: flex;
   justify-content: space-around;
   align-content: center;
@@ -110,6 +111,7 @@
   justify-content: space-around;
   align-content: center;
   align-items: center;
+  padding: 5% 0;
 }
 
 .QuoteCss {
@@ -119,4 +121,12 @@
 .citeCss {
   font-size: 18px;
   color: gray;
+}
+
+.caption {
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  overflow-wrap: break-word;
+  line-height: 200%;
 }

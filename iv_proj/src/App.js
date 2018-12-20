@@ -158,7 +158,7 @@ class App extends Component {
               </div>
 
               <div className="MapContainer">
-                <hr />
+                {/* <hr /> */}
                 <div data-aos="zoom-in">
                   <StepSlider
                     classes={{ root: "root" }}
@@ -188,7 +188,7 @@ class App extends Component {
               </div>
 
               <div className="BarChart">
-                <hr />
+                {/* <hr /> */}
                 <div data-aos="zoom-in">
                   <BarChart data={this.state.data} />
                 </div>
